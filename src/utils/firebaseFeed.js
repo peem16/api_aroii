@@ -9,7 +9,7 @@ async function getReview() {
         return res.docs.map(doc => {
             if (doc.id) {
               return {
-                comment: doc.comment,
+                comment: doc.data().comment,
                 date: doc.data().date,
                 img: doc.data().img,
                 name_shop: doc.data().name_shop,
